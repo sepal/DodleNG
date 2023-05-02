@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mg4agfaap34q17c00",
+  "parentID": "mig_ch8mg42gfaap34q17bv0",
+  "checksum": "1:0d1f7f54f27a9dd16007804a56101278ba36b4e3a5fb9f414e9df9edcbf26c83",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "dbRoundId",
+          "type": "int"
+        },
+        "table": "images"
+      }
+    }
+  ]
+}

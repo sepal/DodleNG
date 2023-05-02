@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mat2gfaap34q179d0",
+  "parentID": "mig_ch8mat2gfaap34q179c0",
+  "checksum": "1:e1e4ace84bc12e838eaddd406501aed4442b7e94592efd7f71ba41e742cbaf31",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "muralSizedPopArtPieceReflectingTheExpressionOfFlabbergastOnVariousFacesSprinkledWithVividColors",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

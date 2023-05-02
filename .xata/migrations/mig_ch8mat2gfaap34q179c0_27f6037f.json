@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mat2gfaap34q179c0",
+  "parentID": "mig_ch8masqgfaap34q179b0",
+  "checksum": "1:27f6037f8f21dba1269a547f8ceeab069bf310ee98e7ec55508426f14840f9ee",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "eagerToEmblazonTheirColorfulAndBoldCoatOfArmsOnAProudBannernflabbergast",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

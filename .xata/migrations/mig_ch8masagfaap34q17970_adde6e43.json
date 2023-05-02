@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8masagfaap34q17970",
+  "parentID": "mig_ch8mas2gfaap34q17960",
+  "checksum": "1:adde6e436c193638e7fd864c3674aab77e1ac611ed33f5b30d1a7ab4ac483658",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "expressionisticSceneFeaturingAMischievousFox",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

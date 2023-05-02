@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mg3qgfaap34q17bt0",
+  "parentID": "mig_ch8mg3qgfaap34q17bs0",
+  "checksum": "1:20822b85e70f3dc5c007094a708ff9c8aa497751e34775a454e668e0e323e50e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "level",
+          "type": "int"
+        },
+        "table": "images"
+      }
+    }
+  ]
+}

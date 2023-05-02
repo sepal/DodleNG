@@ -1,0 +1,12 @@
+{
+  "id": "mig_ch8mev7mktqj4ms13b80",
+  "parentID": "mig_ch8mb3fmktqj4ms13a20",
+  "checksum": "1:4725e238ec034f410606559aac574b22602608caedaad73903ac2f0ef64fbaa4",
+  "operations": [
+    {
+      "addTable": {
+        "table": "games"
+      }
+    }
+  ]
+}

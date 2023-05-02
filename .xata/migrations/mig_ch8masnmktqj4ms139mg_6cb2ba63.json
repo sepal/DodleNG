@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8masnmktqj4ms139mg",
+  "parentID": "mig_ch8masfmktqj4ms139lg",
+  "checksum": "1:6cb2ba63849e9a190cef4c78d545b50827a157a7b407bb240e6a222ea1f90b67",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "aTurnerInspiredSeascape",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

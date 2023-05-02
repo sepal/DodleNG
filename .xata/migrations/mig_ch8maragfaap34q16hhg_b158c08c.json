@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maragfaap34q16hhg",
+  "parentID": "mig_ch8maragfaap34q16heg",
+  "checksum": "1:b158c08c06bafe4cfe20988f3ea42b6bac8fbb0e214c842a0d8448faf9167223",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "chiaroscuroPortraitOfASlyCharacterAttemptingToFinaglePlayingCardsFromTheirSleeveAtADimlyLitTablenkerfuffle",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

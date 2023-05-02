@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mar7mktqj4ms139g0",
+  "parentID": "mig_ch8maqqgfaap34q16h7g",
+  "checksum": "1:e112eafd9b5acbd9d7a0fa922156ff11dc2e0cad010352470cdfe5a2dae9a3ec",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "toCreateAPerplexingAndSwirlingQuagmireLandscapenjuxtaposition",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

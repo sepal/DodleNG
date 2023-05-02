@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mevvmktqj4ms13bd0",
+  "parentID": "mig_ch8mevvmktqj4ms13bc0",
+  "checksum": "1:97c3e74cb69e64cd034cbc14d2fdb07899cc131f1f7608b2a5f9b793d945d345",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "createdAt",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8marqgfaap34q16hn0",
+  "parentID": "mig_ch8marigfaap34q16hk0",
+  "checksum": "1:34ecd91dc5dc187ab7a0da2b81a799b214ee34aac1d3609096f3f80e539626a4",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "fauvistLandscapePaintingCapturingTheEssenceOfMellifluousBirdsongInAVibrant",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mas7mktqj4ms139kg",
+  "parentID": "mig_ch8marvmktqj4ms139jg",
+  "checksum": "1:828492a702dd06038829850dd947499237cde7449506e92a36d36b26527f4487",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "constructivistGeometricArtwork",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

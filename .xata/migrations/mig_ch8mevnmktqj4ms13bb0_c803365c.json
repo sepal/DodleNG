@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mevnmktqj4ms13bb0",
+  "parentID": "mig_ch8mevnmktqj4ms13ba0",
+  "checksum": "1:c803365c17d6f2992082093128de84be85f8cebc22c5db343ceafd1f791409eb",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "bucket",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

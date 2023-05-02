@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mevfmktqj4ms13b90",
+  "parentID": "mig_ch8mevagfaap34q17bqg",
+  "checksum": "1:5e726e06e83a6bb58a590d246d20610dfbf3648c5d1deae9dc6bb659cd8a8955",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "word",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

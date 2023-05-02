@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mf07mktqj4ms13be0",
+  "parentID": "mig_ch8mevvmktqj4ms13bd0",
+  "checksum": "1:654344b43da0d3c62067cd5b340658fc060f537b2e6cfb2e0a083507f794e65d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "updatedAt",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

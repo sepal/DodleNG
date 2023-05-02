@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mevnmktqj4ms13ba0",
+  "parentID": "mig_ch8mevfmktqj4ms13b90",
+  "checksum": "1:313bb626556d8cdb5a371664bb969dcdf8485804b2b4bc8cc0aaf42cfdd53449",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "prompt",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

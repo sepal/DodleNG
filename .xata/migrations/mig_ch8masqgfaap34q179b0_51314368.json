@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8masqgfaap34q179b0",
+  "parentID": "mig_ch8masqgfaap34q179a0",
+  "checksum": "1:5131436892e5e85cb5d40eda8eb7edef0a1c5729182b8a0d238b066c39a0d84d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "cartoonStyleIllustrationOfAnEagerKnight",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

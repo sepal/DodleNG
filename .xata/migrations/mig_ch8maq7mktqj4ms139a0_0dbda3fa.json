@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maq7mktqj4ms139a0",
+  "parentID": "mig_ch8mapvmktqj4ms13990",
+  "checksum": "1:0dbda3fad55e35106959ed726fa01e4ddbb981801afd7ca4e99029d837a5419a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "blimp",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

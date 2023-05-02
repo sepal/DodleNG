@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maqvmktqj4ms139f0",
+  "parentID": "mig_ch8maqnmktqj4ms139e0",
+  "checksum": "1:6e898ec78d4724a406e49b170ba1d22d1677dd068d08bb27bacbe67bcf8e88fd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "intertwiningLines",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

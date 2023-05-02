@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maqfmktqj4ms139b0",
+  "parentID": "mig_ch8maq2gfaap34q16h50",
+  "checksum": "1:92c87e374a445c54a2157c480fe364934249ab73b512a853429386edc223b768",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "bloomingCherryBlossomsnshenanigans",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

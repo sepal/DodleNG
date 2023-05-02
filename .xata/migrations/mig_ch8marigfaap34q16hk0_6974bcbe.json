@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8marigfaap34q16hk0",
+  "parentID": "mig_ch8maragfaap34q16hhg",
+  "checksum": "1:6974bcbee628072f94f1fcce66bf50c4e4d472736016b0453d8bf9bbe013975e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "colorfulRococoStyleSceneWithAGroupOfAristocratsEngagingInAnElegantKerfuffleAtALivelyParisianBallnmellifluous",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

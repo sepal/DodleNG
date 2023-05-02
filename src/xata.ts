@@ -6,12 +6,43 @@ import type {
   XataRecord,
 } from "@xata.io/client";
 
-const tables = [] as const;
+const tables = [
+  {
+    name: "games",
+    columns: [
+      { name: "gameDate", type: "int" },
+      { name: "word", type: "string" },
+      { name: "prompt", type: "string" },
+      { name: "prefix", type: "string" },
+      { name: "createdAt", type: "string" },
+      { name: "updatedAt", type: "string" },
+    ],
+  },
+  {
+    name: "images",
+    columns: [
+      { name: "level", type: "int" },
+      { name: "score", type: "int" },
+      { name: "key", type: "string" },
+      { name: "dbRoundId", type: "int" },
+      { name: "game", type: "link", link: { table: "games" } },
+    ],
+  },
+] as const;
 
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
 
-export type DatabaseSchema = {};
+export type Games = InferredTypes["games"];
+export type GamesRecord = Games & XataRecord;
+
+export type Images = InferredTypes["images"];
+export type ImagesRecord = Images & XataRecord;
+
+export type DatabaseSchema = {
+  games: GamesRecord;
+  images: ImagesRecord;
+};
 
 const DatabaseClient = buildClient();
 

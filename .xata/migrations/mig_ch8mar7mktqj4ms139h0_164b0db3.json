@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mar7mktqj4ms139h0",
+  "parentID": "mig_ch8mar7mktqj4ms139g0",
+  "checksum": "1:164b0db3fd3cf080e994f079042eea26bb2a3b044613b7a324b20dff1ff743fc",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "anAbstractCubistPaintingWithBoldColors",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

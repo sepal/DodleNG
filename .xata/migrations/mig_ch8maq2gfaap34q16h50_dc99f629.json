@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maq2gfaap34q16h50",
+  "parentID": "mig_ch8maq7mktqj4ms139a0",
+  "checksum": "1:dc99f629bd385ad8a0b58af5f8fa8bbf72a96feeef703aab21e7570f485ca398",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "anImpressionisticOilPaintingOfATinyBlimpFloatingGracefullyAmidstGigantic",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

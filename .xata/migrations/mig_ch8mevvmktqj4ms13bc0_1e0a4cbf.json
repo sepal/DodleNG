@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mevvmktqj4ms13bc0",
+  "parentID": "mig_ch8mevnmktqj4ms13bb0",
+  "checksum": "1:1e0a4cbfde3aa3bb58e3a5dd5c32ae863a077946110494955c95f8070582aff2",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "prefix",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

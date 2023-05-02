@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8masfmktqj4ms139lg",
+  "parentID": "mig_ch8masagfaap34q17970",
+  "checksum": "1:bdc82c64d7a40f95f929a3d401a75d801b3e82794a5c6433925cc947c4831f5f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "attemptingToBamboozleAGatheringOfForestAnimalsnzephyr",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

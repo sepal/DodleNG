@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8mas2gfaap34q17960",
+  "parentID": "mig_ch8mas7mktqj4ms139kg",
+  "checksum": "1:9a505e0137a2c01ebfcbe31ba02ed67f8e4d31711df3d35bb3d35e1f63de5556",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "composedOfOverlappingTrapezoidsFormingAnIntricateAndStrikingDesignnbamboozle",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

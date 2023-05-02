@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8marvmktqj4ms139jg",
+  "parentID": "mig_ch8marqgfaap34q16hn0",
+  "checksum": "1:48aca2442d8f77abab9c827261e60c40cfd241351aa03e902bcb144f8539a2e8",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "sunlitForestntrapezoid",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

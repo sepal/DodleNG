@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8masqgfaap34q179a0",
+  "parentID": "mig_ch8masigfaap34q17990",
+  "checksum": "1:b43bfc01a24a0cc1b47a103c7aaa4e2e827029b4340bef07053cdca6bc3b4d81",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "aLivelyAmericanRegionalismPieceDepictingAGroupOfChildrenRacingToSkedaddleFromAnApproachingStormnemblazon",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

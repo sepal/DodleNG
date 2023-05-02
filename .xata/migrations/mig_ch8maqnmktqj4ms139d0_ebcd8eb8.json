@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maqnmktqj4ms139d0",
+  "parentID": "mig_ch8maqfmktqj4ms139c0",
+  "checksum": "1:ebcd8eb80119ceab976b5bd0c085c954ab3b39e25d540b1ab2c852e141a49c1c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "portrayingAGroupOfCapybarasInvolvedInPlayfulUnderwaterShenanigansnhaberdashery",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

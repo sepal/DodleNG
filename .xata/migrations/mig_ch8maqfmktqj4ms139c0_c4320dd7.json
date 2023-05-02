@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maqfmktqj4ms139c0",
+  "parentID": "mig_ch8maqfmktqj4ms139b0",
+  "checksum": "1:c4320dd7f1dd4063093a7b2b83b0ac028b2190c49c16dc586cc65b75451f1c2b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "darkSurrealistPaintingInspiredByDali",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

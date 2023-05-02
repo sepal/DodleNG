@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8masigfaap34q17990",
+  "parentID": "mig_ch8masnmktqj4ms139mg",
+  "checksum": "1:85365ae6889273a9ecd3545ffc38da4696ca6fabc55094bb1cc6a59da00989fd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "whereinAGentleZephyrCaressesTheSailsOfALonelyShipAgainstTheSettingSunnskedaddle",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

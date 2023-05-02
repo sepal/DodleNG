@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maragfaap34q16heg",
+  "parentID": "mig_ch8mar7mktqj4ms139h0",
+  "checksum": "1:3ef16f258e89cfefc58f9d46e02e1982ff805c847d1f8ac9b6ad69b8074a0b5e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "displayingTheJuxtapositionOfNatureAndMachinerynfinagle",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

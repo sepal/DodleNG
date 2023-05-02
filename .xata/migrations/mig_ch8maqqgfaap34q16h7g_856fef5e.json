@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch8maqqgfaap34q16h7g",
+  "parentID": "mig_ch8maqvmktqj4ms139f0",
+  "checksum": "1:856fef5e56a80179f368a249bb65047866be1e45c646724da5bf862283a91ccd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "influencedByVanGogh",
+          "type": "string"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}
