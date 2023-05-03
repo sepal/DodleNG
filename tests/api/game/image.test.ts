@@ -28,7 +28,9 @@ test("GET /api/game/1/image/1 returns correct image size", async () => {
     })
   );
 
-  const response = await GET(new Request("/"), { params: { gameId, level } });
+  const response = await GET(new Request("localhost:3000/game/1/level/1"), {
+    params: { gameId, level },
+  });
   const buffer = await response.arrayBuffer();
 
   expect(response.status).toBe(200);
