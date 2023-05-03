@@ -1,8 +1,6 @@
 import { getS3Item } from "@/lib/aws-s3";
 import { getXataClient } from "@/xata";
 
-const xata = getXataClient();
-
 export async function GET(
   request: Request,
   {
@@ -10,41 +8,34 @@ export async function GET(
   }: {
     params: {
       gameId: string;
-      imageIdx: number;
+      level: string;
     };
   }
 ) {
-  const { gameId, imageIdx } = params;
+  const xata = getXataClient();
+
+  const { gameId, level } = params;
 
   const game = await xata.db.games.read(gameId);
-
-  if (imageIdx < 0) {
-    return new Response("Wrong image index.", {
-      status: 400,
-    });
-  }
 
   const imageRecord = await xata.db.images
     .filter({
       game: game,
+      level: parseInt(level),
     })
-    .getAll();
+    .getFirst();
 
-  if (imageIdx >= imageRecord.length) {
-    return new Response("Wrong image index.", {
-      status: 400,
-    });
+  if (!imageRecord) {
+    return new Response("No image found", { status: 404 });
   }
 
-  const key = imageRecord[imageIdx].key;
-
-  if (!key) {
+  if (!imageRecord.key) {
     return new Response("Server error", {
       status: 500,
     });
   }
 
-  const image = await getS3Item(key);
+  const image = await getS3Item(imageRecord.key);
 
   if (!image) {
     return new Response("Server error", {
