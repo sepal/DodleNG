@@ -21,6 +21,8 @@
     ]
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.325.0",
+    "@aws-sdk/s3-request-presigner": "^3.325.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
@@ -43,6 +45,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1"
   }
 }
