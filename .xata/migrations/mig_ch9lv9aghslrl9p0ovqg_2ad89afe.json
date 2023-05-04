@@ -1,0 +1,18 @@
+{
+  "id": "mig_ch9lv9aghslrl9p0ovqg",
+  "parentID": "mig_ch9lu62ghslrl9p0ovpg",
+  "checksum": "1:2ad89afe1257d39e0ca80e18b081e06e65ecb80c5abdf605d2c662fecc38bb77",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "createdAt",
+          "type": "datetime",
+          "notNull": true,
+          "defaultValue": "now"
+        },
+        "table": "games"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mig_ch9lu62ghslrl9p0ovpg",
+  "parentID": "mig_ch9lu4ei1li5ovcq2o9g",
+  "checksum": "1:482593ee01ced5f6800ce0dfde8bdc6f68392a0b6023023982cc39b6a92fbf9e",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "updatedAtOld",
+        "oldName": "updatedAt",
+        "table": "games"
+      }
+    }
+  ]
+}

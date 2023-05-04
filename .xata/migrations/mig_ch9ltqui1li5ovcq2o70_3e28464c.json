@@ -1,0 +1,16 @@
+{
+  "id": "mig_ch9ltqui1li5ovcq2o70",
+  "parentID": "mig_ch9ltmmi1li5ovcq2o60",
+  "checksum": "1:3e28464cbc1f9d3c0146b654c7911b559ef7d5b789fbb59385121bdd9f956916",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "createdAt",
+          "type": "datetime"
+        },
+        "table": "Test"
+      }
+    }
+  ]
+}

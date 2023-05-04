@@ -1,0 +1,14 @@
+{
+  "id": "mig_ch9m2cqeimh1mhfs9g5g",
+  "parentID": "mig_ch9lvg6i1li5ovcq3i3g",
+  "checksum": "1:97a56a77eedda7f1fa468619b7d76175fabe4b00a7c2d3277a298096e4792702",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "bucketPrefix",
+        "oldName": "prefix",
+        "table": "games"
+      }
+    }
+  ]
+}

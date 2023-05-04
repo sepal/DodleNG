@@ -1,0 +1,14 @@
+{
+  "id": "mig_ch9lu4ei1li5ovcq2o9g",
+  "parentID": "mig_ch9lu26i1li5ovcq2o8g",
+  "checksum": "1:af4441c61c440ba2029cd75b777b74de5f5d3cc4acc3b5e474e7a88ecf15ac62",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "createdAtOld",
+        "oldName": "createdAt",
+        "table": "games"
+      }
+    }
+  ]
+}

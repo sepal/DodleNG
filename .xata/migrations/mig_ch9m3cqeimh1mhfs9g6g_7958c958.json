@@ -1,0 +1,13 @@
+{
+  "id": "mig_ch9m3cqeimh1mhfs9g6g",
+  "parentID": "mig_ch9m3bui1li5ovcq3jlg",
+  "checksum": "1:7958c958d127b0e7317327c78caab3b84aa798b03f80b138374a7054314152a6",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "updatedAtOld",
+        "table": "games"
+      }
+    }
+  ]
+}

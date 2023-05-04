@@ -13,9 +13,19 @@ const tables = [
       { name: "gameDate", type: "int" },
       { name: "word", type: "string" },
       { name: "prompt", type: "string" },
-      { name: "prefix", type: "string" },
-      { name: "createdAt", type: "string" },
-      { name: "updatedAt", type: "string" },
+      { name: "bucketPrefix", type: "string" },
+      {
+        name: "createdAt",
+        type: "datetime",
+        notNull: true,
+        defaultValue: "now",
+      },
+      {
+        name: "updatedAt",
+        type: "datetime",
+        notNull: true,
+        defaultValue: "now",
+      },
     ],
   },
   {
