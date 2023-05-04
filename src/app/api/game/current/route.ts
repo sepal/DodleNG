@@ -1,3 +1,4 @@
+import { fetchGame } from "@/lib/game";
 import { roundToDay } from "@/utils/date";
 import { getXataClient } from "@/xata";
 import { cookies } from "next/dist/client/components/headers";
@@ -18,25 +19,7 @@ export async function GET(
 
   timezoneOffset = parseInt(timezoneOffset.toString());
 
-  if (timezoneOffset > 12) {
-    timezoneOffset = 12;
-  }
-
-  const date = new Date();
-
-  const localDate = new Date(date.getTime() - timezoneOffset);
-  const epochTime = Math.floor(localDate.getTime() / 1000);
-  const epochDay = roundToDay(epochTime);
-
-  const xata = getXataClient();
-  const game = await xata.db.games
-    .filter({
-      gameDate: {
-        $le: epochDay,
-      },
-    })
-    .sort("gameDate", "desc")
-    .getFirst();
+  const game = await fetchGame(timezoneOffset);
 
   if (!game) {
     return new Response("No game found.", {
