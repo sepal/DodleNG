@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import { cookies } from "next/dist/client/components/headers";
 import { fetchGame } from "@/lib/game";
 import { Game } from "@/component/game";
-import { GamesRecord } from "@/xata";
 
 const inter = Inter({ subsets: ["latin"] });
 
