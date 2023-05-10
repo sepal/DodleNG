@@ -16,7 +16,7 @@ export const Game = ({ game }: GameProps) => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen flex-col">
+    <div className="flex items-center min-h-screen flex-col">
       <Easel imageUrl={imageUrl} />
       <TileGrid word={game.word} />
     </div>

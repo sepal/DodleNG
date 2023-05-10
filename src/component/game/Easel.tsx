@@ -9,24 +9,22 @@ interface EaselProps {
 }
 
 export const Easel = ({ imageUrl }: EaselProps) => (
-  <div className="relative w-full h-full">
-    <div className="items-center justify-center">
+  <div className="relative py-2">
+    <Image
+      src="/easel.png"
+      alt="Easel"
+      className="easel"
+      width="512"
+      height="512"
+    />
+    <div className="absolute inset-0 top-[114px] left-[106px]">
       <Image
-        src="/easel.png"
-        alt="Easel"
-        className="easel"
-        width="512"
-        height="512"
+        src={imageUrl}
+        alt="Painting"
+        className="picture"
+        width="300"
+        height="300"
       />
-      <div className="absolute inset-0 top-[106px] left-[106px]">
-        <Image
-          src={imageUrl}
-          alt="Painting"
-          className="picture"
-          width="300"
-          height="300"
-        />
-      </div>
     </div>
   </div>
 );
