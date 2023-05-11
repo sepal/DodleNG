@@ -1,29 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useGame } from "@/lib/gameContext";
 import { InputTile } from "./InputTile";
 
-interface Props {
-  wordLen: number;
-  guess?: string[];
-  activeTile?: number;
-}
-
-export const InputRow = ({ wordLen, guess = [], activeTile = 0 }: Props) => {
-  // const [activeTile, setActiveTile] = useState<number | undefined>(
-  //   defaultActiveTile
-  // );
+export const InputRow = () => {
+  const { word, guess, guessIndex, setGuessIndex } = useGame();
+  const wordLen = word.length;
 
   const inputTiles = Array(wordLen)
     .fill(null)
     .map((v, i) => {
       return (
         <InputTile
-          // onClick={() => {
-          //   setActiveTile(activeTile);
-          // }}
+          onClick={() => {
+            setGuessIndex(i);
+          }}
           key={i}
-          active={activeTile == i}
+          active={guessIndex == i}
           letter={guess[i]}
         />
       );
