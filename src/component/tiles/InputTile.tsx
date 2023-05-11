@@ -12,7 +12,7 @@ export const InputTile = ({
   active = false,
 }: Props) => {
   let styling =
-    "border inline-flex items-center justify-center bg-white text-lg font-semibold rounded h-[2rem] w-[2rem] cursor-pointer";
+    "border inline-flex items-center justify-center bg-white text-lg rounded h-[2rem] w-[2rem] cursor-pointer";
 
   if (active) {
     styling += " border-blue-500";
