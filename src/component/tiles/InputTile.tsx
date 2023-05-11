@@ -21,7 +21,7 @@ export const InputTile = ({
   }
 
   return (
-    <div onClick={onSelect} className={styling}>
+    <div data-testid="input-tile" onClick={onSelect} className={styling}>
       {letter}
     </div>
   );
