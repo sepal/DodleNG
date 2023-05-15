@@ -9,7 +9,6 @@ export function getCurrentEpoch(date = new Date()) {
 export function roundToDay(epoch: number) {
   const oneDay = 86400;
   const fraction = (epoch / oneDay) | 0;
-  console.log(fraction);
 
   return fraction * oneDay;
 }
