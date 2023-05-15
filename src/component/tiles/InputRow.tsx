@@ -4,7 +4,8 @@ import { useGame } from "@/lib/gameContext";
 import { InputTile } from "./InputTile";
 
 export const InputRow = () => {
-  const { word, guess, guessIndex, setGuessIndex } = useGame();
+  const { state, setGuessIndex } = useGame();
+  const { word, guess, guessIndex } = state;
   const wordLen = word.length;
 
   const inputTiles = Array(wordLen)

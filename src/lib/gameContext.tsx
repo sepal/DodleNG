@@ -1,10 +1,20 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useReducer,
+  useState,
+} from "react";
 import { onKeyPress } from "./onKeyPress";
+import gameReducer from "./gameReducer";
+import {
+  GAME_STATE_ACTION_TYPE,
+  GAME_STATE_TYPE,
+  GameState,
+} from "@/types/game";
 
 interface GameContextProps {
-  word: string;
-  guess: string[];
-  guessIndex: number;
+  state: GameState;
   setGuessIndex: (index: number) => void;
 }
 
@@ -24,35 +34,52 @@ interface GameProviderProps {
 }
 
 export const GameProvider = ({ children, word }: GameProviderProps) => {
-  const [guess, setGuess] = useState<string[]>(Array(word.length).fill(""));
-  const [guessIndex, setGuessIndex] = useState<number>(0);
+  const [state, dispatch] = useReducer(gameReducer, {
+    word: word,
+    guess: Array(word.length).fill(""),
+    guessIndex: 0,
+    state: GAME_STATE_TYPE.IDLE,
+  });
+
+  function handleAddLetter(letter: string) {
+    dispatch({
+      type: GAME_STATE_ACTION_TYPE.ENTER_LETTER,
+      payload: {
+        letter: letter,
+      },
+    });
+  }
+
+  function handleRemoveLetter() {
+    dispatch({
+      type: GAME_STATE_ACTION_TYPE.REMOVE_LETTER,
+      payload: {},
+    });
+  }
+
+  function handleGuessIndex(index: number) {
+    dispatch({
+      type: GAME_STATE_ACTION_TYPE.SET_GUESS_INDEX,
+      payload: {
+        guessIndex: index,
+      },
+    });
+  }
 
   const keyHandler = (key: string) => {
-    if (
-      key >= "a" &&
-      key <= "z" &&
-      key.length == 1 &&
-      guessIndex < word.length
-    ) {
-      const newGuess = [...guess];
-      newGuess[guessIndex] = key;
-      setGuess(newGuess);
-      setGuessIndex(guessIndex + 1);
+    if (key >= "a" && key <= "z" && key.length == 1) {
+      handleAddLetter(key);
     }
 
-    if (key === "backspace" && guessIndex > 0) {
-      const newIndex = guessIndex - 1;
-      const newGuess = [...guess];
-      newGuess[newIndex] = "";
-      setGuess(newGuess);
-      setGuessIndex(newIndex);
+    if (key === "backspace") {
+      handleRemoveLetter();
     }
   };
 
   onKeyPress(keyHandler);
 
   return (
-    <GameContext.Provider value={{ word, guess, guessIndex, setGuessIndex }}>
+    <GameContext.Provider value={{ state, setGuessIndex: handleGuessIndex }}>
       {children}
     </GameContext.Provider>
   );
