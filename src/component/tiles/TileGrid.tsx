@@ -1,4 +1,7 @@
+import { useGame } from "@/lib/gameContext";
 import { InputRow } from "./InputRow";
+import { Tile } from "./Tile";
+import { GAME_STATE_TYPE } from "@/types/game";
 
 interface Props {
   word: string;
@@ -6,11 +9,23 @@ interface Props {
 
 export const TileGrid = ({ word }: Props) => {
   const wordLen = word.length;
-  const gridClasses = `inline-grid grid-flow-col grid-cols-${wordLen} gap-4 py-2`;
+  const gridClasses = `inline-grid grid-cols-${wordLen} gap-4 py-2`;
+
+  const { state } = useGame();
+  const { guesses } = state;
+
+  const tiles = guesses.map((guess, i) => {
+    return Array.from(guess).map((letter, j) => (
+      <Tile key={i * 5 + j} letter={letter} />
+    ));
+  });
+
+  const inputRow = state.state == GAME_STATE_TYPE.PLAYING ? <InputRow /> : "";
 
   return (
     <div className={gridClasses}>
-      <InputRow />
+      {tiles}
+      {inputRow}
     </div>
   );
 };

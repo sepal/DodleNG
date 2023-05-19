@@ -16,6 +16,7 @@ export enum GAME_STATE_ACTION_TYPE {
 export interface GameState {
   word: string;
   guess: string[];
+  guesses: string[];
   guessIndex: number;
   state: GAME_STATE_TYPE;
 }

@@ -38,7 +38,8 @@ export const GameProvider = ({ children, word }: GameProviderProps) => {
     word: word,
     guess: Array(word.length).fill(""),
     guessIndex: 0,
-    state: GAME_STATE_TYPE.IDLE,
+    guesses: [],
+    state: GAME_STATE_TYPE.PLAYING,
   });
 
   function handleAddLetter(letter: string) {
@@ -66,13 +67,26 @@ export const GameProvider = ({ children, word }: GameProviderProps) => {
     });
   }
 
-  const keyHandler = (key: string) => {
-    if (key >= "a" && key <= "z" && key.length == 1) {
-      handleAddLetter(key);
-    }
+  function handleGuess() {
+    dispatch({
+      type: GAME_STATE_ACTION_TYPE.GUESS,
+      payload: {},
+    });
+  }
 
-    if (key === "backspace") {
-      handleRemoveLetter();
+  const keyHandler = (key: string) => {
+    if (state.state == GAME_STATE_TYPE.PLAYING) {
+      if (key >= "a" && key <= "z" && key.length == 1) {
+        handleAddLetter(key);
+      }
+
+      if (key === "backspace") {
+        handleRemoveLetter();
+      }
+
+      if (key == "enter") {
+        handleGuess();
+      }
     }
   };
 
