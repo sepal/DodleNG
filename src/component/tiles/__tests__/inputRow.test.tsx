@@ -11,7 +11,7 @@ describe("InputRow", () => {
   test("can switch between several InputTiles", () => {
     const word = "test";
     const { getAllByTestId } = render(
-      <GameProvider word={word}>
+      <GameProvider word={word} prompt={word}>
         <InputRow />
       </GameProvider>
     );
