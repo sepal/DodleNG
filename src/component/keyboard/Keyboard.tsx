@@ -24,7 +24,6 @@ export const Keyboard = () => {
     handleRemoveLetter();
   };
 
-  console.log(state.guesses);
   let keyStates = getKeyStates(state.word, state.guesses);
 
   const firstRow = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"].map(
