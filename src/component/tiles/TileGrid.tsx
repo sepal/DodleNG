@@ -15,7 +15,7 @@ export const TileGrid = ({ word }: Props) => {
   const { guesses } = state;
 
   const tiles = guesses.map((guess, i) => (
-    <TileRow guess={guess} solution={word} />
+    <TileRow key={i} guess={guess} solution={word} />
   ));
 
   const inputRow = state.state == GAME_STATE_TYPE.PLAYING ? <InputRow /> : "";
