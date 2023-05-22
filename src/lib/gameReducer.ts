@@ -66,7 +66,6 @@ export default function (state: GameState, action: GameStateAction) {
         newGameState = GAME_STATE_TYPE.FAILED;
       }
 
-      console.log(newGameState);
       return {
         ...state,
         guesses: [...state.guesses, guessString],
