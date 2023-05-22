@@ -2,6 +2,7 @@ import { useGame } from "@/lib/gameContext";
 import { InputRow } from "./InputRow";
 import { Tile } from "./Tile";
 import { GAME_STATE_TYPE } from "@/types/game";
+import { TileRow } from "./TileRow";
 
 interface Props {
   word: string;
@@ -13,11 +14,9 @@ export const TileGrid = ({ word }: Props) => {
   const { state } = useGame();
   const { guesses } = state;
 
-  const tiles = guesses.map((guess, i) => {
-    return Array.from(guess).map((letter, j) => (
-      <Tile key={i * 5 + j} letter={letter} />
-    ));
-  });
+  const tiles = guesses.map((guess, i) => (
+    <TileRow key={i} guess={guess} solution={word} />
+  ));
 
   const inputRow = state.state == GAME_STATE_TYPE.PLAYING ? <InputRow /> : "";
 
