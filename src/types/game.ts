@@ -1,5 +1,4 @@
 export enum GAME_STATE_TYPE {
-  IDLE = "idle",
   PLAYING = "playing",
   SUCCESS = "success",
   FAILED = "failed",
