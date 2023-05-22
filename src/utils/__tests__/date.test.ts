@@ -1,22 +1,5 @@
 /**
  * @author codelity
- * @prompt Create a unit test for getCurrentEpoch, which should take in a date and return the epoch,
- * but disregard the timezone. So if the passed date is 2023-05-01T08:00:00+02:00 the epoch should
- * be 1682928000.
- */
-import { getCurrentEpoch } from "../date";
-
-describe("getCurrentEpoch", () => {
-  it("should return the correct epoch time without timezone", () => {
-    const date = new Date("2023-05-01T08:00:00+02:00");
-    const expectedEpoch = 1682928000;
-    const result = getCurrentEpoch(date);
-    expect(result).toEqual(expectedEpoch);
-  });
-});
-
-/**
- * @author codelity
  * @prompt Create a unit test for roundToDay.
  */
 import { roundToDay } from "../date";

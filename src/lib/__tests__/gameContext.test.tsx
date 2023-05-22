@@ -6,13 +6,15 @@
 import { render, fireEvent } from "@testing-library/react";
 import { GameProvider } from "../gameContext";
 import { InputRow } from "../../component/tiles/InputRow";
+import { Key, Keyboard } from "@/component/keyboard";
 
 describe("GameProvider", () => {
   test("only allows letters to be typed", () => {
     const word = "test";
     const { getAllByTestId } = render(
-      <GameProvider word={word}>
+      <GameProvider word={word} prompt={word}>
         <InputRow />
+        <Keyboard />
       </GameProvider>
     );
 
@@ -36,8 +38,9 @@ describe("GameProvider", () => {
   test("backspace functionality works", () => {
     const word = "test";
     const { getAllByTestId } = render(
-      <GameProvider word={word}>
+      <GameProvider word={word} prompt={word}>
         <InputRow />
+        <Keyboard />
       </GameProvider>
     );
 
