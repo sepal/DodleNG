@@ -1,4 +1,5 @@
 import { LETTER_TYPE } from "@/types/letter";
+import { splitWord } from "@/utils/words";
 
 export function getLetterTypeColor(keyType: LETTER_TYPE) {
   switch (keyType) {
@@ -22,7 +23,7 @@ export function getKeyStates(word: string, guesses: string[]) {
     if (guess.length != word.length) {
       throw "Invalid guess size";
     }
-    const splitGuess = Array.from(guess.toLowerCase());
+    const splitGuess = splitWord(guess.toLowerCase());
     splitGuess.forEach((letter, i) => {
       if (!solution.includes(letter)) {
         states[letter] = LETTER_TYPE.WRONG;
