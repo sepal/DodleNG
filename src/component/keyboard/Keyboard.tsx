@@ -1,14 +1,26 @@
+import { useGame } from "@/lib/gameContext";
 import { Key } from "./Key";
 import { KeyRow } from "./KeyRow";
+import { GAME_STATE_TYPE } from "@/types/game";
 
 export const Keyboard = () => {
+  const { state, handleAddLetter, handleRemoveLetter, handleGuess } = useGame();
+
+  if (state.state != GAME_STATE_TYPE.PLAYING) {
+    return <></>;
+  }
+
   const handleKeyClick = (value: string) => {
-    console.log(value);
+    handleAddLetter(value);
   };
 
-  const handleEnterClick = (value: string) => {};
+  const handleEnterClick = (value: string) => {
+    handleGuess();
+  };
 
-  const handleDeleteClick = (value: string) => {};
+  const handleDeleteClick = (value: string) => {
+    handleRemoveLetter();
+  };
 
   const firstRow = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"].map(
     (v) => (

@@ -15,6 +15,9 @@ import {
 
 interface GameContextProps {
   state: GameState;
+  handleAddLetter: (letter: string) => void;
+  handleRemoveLetter: () => void;
+  handleGuess: () => void;
   setGuessIndex: (index: number) => void;
 }
 
@@ -95,7 +98,15 @@ export const GameProvider = ({ children, word, prompt }: GameProviderProps) => {
   onKeyPress(keyHandler);
 
   return (
-    <GameContext.Provider value={{ state, setGuessIndex: handleGuessIndex }}>
+    <GameContext.Provider
+      value={{
+        state,
+        handleAddLetter,
+        handleRemoveLetter,
+        handleGuess,
+        setGuessIndex: handleGuessIndex,
+      }}
+    >
       {children}
     </GameContext.Provider>
   );
