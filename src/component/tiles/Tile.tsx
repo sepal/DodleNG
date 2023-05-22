@@ -1,4 +1,4 @@
-import { getKeyTypeColor } from "@/lib/keyStates";
+import { getLetterTypeColor } from "@/lib/keyStates";
 import { LETTER_TYPE } from "@/types/letter";
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Tile = ({ letter, type = LETTER_TYPE.UNUSED }: Props) => {
-  const color = getKeyTypeColor(type);
+  const color = getLetterTypeColor(type);
   let styling = `border ${color} inline-flex items-center justify-center bg-white text-lg rounded h-[2rem] w-[2rem] cursor-pointer`;
 
   return (

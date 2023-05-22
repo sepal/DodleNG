@@ -1,6 +1,6 @@
 import { LETTER_TYPE } from "@/types/letter";
 
-export function getKeyTypeColor(keyType: LETTER_TYPE) {
+export function getLetterTypeColor(keyType: LETTER_TYPE) {
   switch (keyType) {
     case LETTER_TYPE.WRONG:
       return "bg-slate-400 text-white";

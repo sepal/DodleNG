@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { LETTER_TYPE } from "@/types/letter";
-import { getKeyTypeColor } from "@/lib/keyStates";
+import { getLetterTypeColor } from "@/lib/keyStates";
 
 interface Props {
   value: string;
@@ -15,7 +15,7 @@ export const Key = ({
   children,
   onClick = (value: string) => {},
 }: Props) => {
-  const colors = getKeyTypeColor(type);
+  const colors = getLetterTypeColor(type);
   const classNames = `border ${colors} active:shadow-inner rounded px-2 min-w-6 h-10 mx-2`;
   return (
     <button
