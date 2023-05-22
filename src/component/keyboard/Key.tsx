@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { LETTER_TYPE } from "@/types/letter";
-import { getLetterTypeColor } from "@/lib/keyStates";
+import { getLetterTypeColor } from "@/lib/letters";
 
 interface Props {
   value: string;

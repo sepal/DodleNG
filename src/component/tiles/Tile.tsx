@@ -1,4 +1,4 @@
-import { getLetterTypeColor } from "@/lib/keyStates";
+import { getLetterTypeColor } from "@/lib/letters";
 import { LETTER_TYPE } from "@/types/letter";
 
 interface Props {
