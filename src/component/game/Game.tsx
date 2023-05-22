@@ -4,6 +4,7 @@ import { GamesRecord } from "@/xata";
 import { Easel } from "./Easel";
 import { TileGrid } from "../tiles";
 import { GameProvider } from "@/lib/gameContext";
+import { StateMessage } from "./StateMessage";
 
 interface GameProps {
   game: GamesRecord;
@@ -21,6 +22,7 @@ export const Game = ({ game }: GameProps) => {
       <div className="flex items-center min-h-screen flex-col">
         <Easel imageUrl={imageUrl} />
         <TileGrid word={game.word} />
+        <StateMessage />
       </div>
     </GameProvider>
   );
