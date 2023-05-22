@@ -52,29 +52,25 @@ export default function (state: GameState, action: GameStateAction) {
 
     case GAME_STATE_ACTION_TYPE.GUESS:
       const guessLength = newGuess.filter((letter) => letter != "");
-      console.log(guessLength);
       if (guessLength.length != word.length) {
         return state;
       }
       const guessString = newGuess.join("");
-      if (state.guesses.length >= 4) {
-        const newGameState =
-          guessString.toLowerCase() == word.toLowerCase()
-            ? GAME_STATE_TYPE.SUCCESS
-            : GAME_STATE_TYPE.FAILED;
-
-        return {
-          ...state,
-          guesses: [...state.guesses, guessString],
-          state: newGameState,
-          guess: Array(word.length).fill(""),
-          guessIndex: 0,
-        };
+      let newGameState = GAME_STATE_TYPE.PLAYING;
+      if (guessString.toLowerCase() == word.toLowerCase()) {
+        newGameState = GAME_STATE_TYPE.SUCCESS;
+      } else if (
+        state.guesses.length >= 4 &&
+        guessString.toLowerCase() != word.toLowerCase()
+      ) {
+        newGameState = GAME_STATE_TYPE.FAILED;
       }
 
+      console.log(newGameState);
       return {
         ...state,
         guesses: [...state.guesses, guessString],
+        state: newGameState,
         guess: Array(word.length).fill(""),
         guessIndex: 0,
       };
