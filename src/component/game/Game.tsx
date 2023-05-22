@@ -5,6 +5,7 @@ import { Easel } from "./Easel";
 import { TileGrid } from "../tiles";
 import { GameProvider } from "@/lib/gameContext";
 import { StateMessage } from "./StateMessage";
+import { Keyboard } from "../keyboard";
 
 interface GameProps {
   game: GamesRecord;
@@ -23,6 +24,7 @@ export const Game = ({ game }: GameProps) => {
         <Easel imageUrl={imageUrl} />
         <TileGrid word={game.word} />
         <StateMessage />
+        <Keyboard />
       </div>
     </GameProvider>
   );
