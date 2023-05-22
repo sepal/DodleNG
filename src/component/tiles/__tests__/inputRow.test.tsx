@@ -6,6 +6,7 @@
 import { render, fireEvent } from "@testing-library/react";
 import { GameProvider } from "../../../lib/gameContext";
 import { InputRow } from "../InputRow";
+import { Keyboard } from "@/component/keyboard";
 
 describe("InputRow", () => {
   test("can switch between several InputTiles", () => {
@@ -13,6 +14,7 @@ describe("InputRow", () => {
     const { getAllByTestId } = render(
       <GameProvider word={word} prompt={word}>
         <InputRow />
+        <Keyboard />
       </GameProvider>
     );
 
