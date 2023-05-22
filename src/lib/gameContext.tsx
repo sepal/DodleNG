@@ -1,11 +1,4 @@
-import {
-  ReactNode,
-  createContext,
-  useContext,
-  useReducer,
-  useState,
-} from "react";
-import { onKeyPress } from "./onKeyPress";
+import { ReactNode, createContext, useContext, useReducer } from "react";
 import gameReducer from "./gameReducer";
 import {
   GAME_STATE_ACTION_TYPE,
@@ -15,6 +8,9 @@ import {
 
 interface GameContextProps {
   state: GameState;
+  handleAddLetter: (letter: string) => void;
+  handleRemoveLetter: () => void;
+  handleGuess: () => void;
   setGuessIndex: (index: number) => void;
 }
 
@@ -76,26 +72,16 @@ export const GameProvider = ({ children, word, prompt }: GameProviderProps) => {
     });
   }
 
-  const keyHandler = (key: string) => {
-    if (state.state == GAME_STATE_TYPE.PLAYING) {
-      if (key >= "a" && key <= "z" && key.length == 1) {
-        handleAddLetter(key);
-      }
-
-      if (key === "backspace") {
-        handleRemoveLetter();
-      }
-
-      if (key == "enter") {
-        handleGuess();
-      }
-    }
-  };
-
-  onKeyPress(keyHandler);
-
   return (
-    <GameContext.Provider value={{ state, setGuessIndex: handleGuessIndex }}>
+    <GameContext.Provider
+      value={{
+        state,
+        handleAddLetter,
+        handleRemoveLetter,
+        handleGuess,
+        setGuessIndex: handleGuessIndex,
+      }}
+    >
       {children}
     </GameContext.Provider>
   );
