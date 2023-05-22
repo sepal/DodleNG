@@ -1,5 +1,18 @@
 import { KEY_TYPE } from "@/types/keyboard";
 
+export function getKeyTypeColor(keyType: KEY_TYPE) {
+  switch (keyType) {
+    case KEY_TYPE.WRONG:
+      return "bg-slate-400 text-white";
+    case KEY_TYPE.CORRECT:
+      return "bg-green-700 text-white";
+    case KEY_TYPE.PRESENT:
+      return "bg-yellow-200";
+    default:
+      return "bg-white";
+  }
+}
+
 export function getKeyStates(word: string, guesses: string[]) {
   let states: { [key: string]: KEY_TYPE } = {};
 

@@ -1,24 +1,12 @@
 import { ReactNode } from "react";
 import { KEY_TYPE } from "@/types/keyboard";
+import { getKeyTypeColor } from "@/lib/keyStates";
 
 interface Props {
   value: string;
   type?: KEY_TYPE;
   children?: ReactNode;
   onClick?: (value: string) => void;
-}
-
-function getKeyTypeColor(keyType: KEY_TYPE) {
-  switch (keyType) {
-    case KEY_TYPE.WRONG:
-      return "bg-slate-400 text-white";
-    case KEY_TYPE.CORRECT:
-      return "bg-green-700 text-white";
-    case KEY_TYPE.PRESENT:
-      return "bg-yellow-200";
-    default:
-      return "bg-white";
-  }
 }
 
 export const Key = ({
@@ -31,6 +19,7 @@ export const Key = ({
   const classNames = `border ${colors} active:shadow-inner rounded px-2 min-w-6 h-10 mx-2`;
   return (
     <button
+      data-testid="key"
       onClick={(event) => {
         onClick(value);
       }}
