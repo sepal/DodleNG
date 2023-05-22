@@ -30,12 +30,14 @@ export const useGame = () => {
 
 interface GameProviderProps {
   word: string;
+  prompt: string;
   children?: ReactNode;
 }
 
-export const GameProvider = ({ children, word }: GameProviderProps) => {
+export const GameProvider = ({ children, word, prompt }: GameProviderProps) => {
   const [state, dispatch] = useReducer(gameReducer, {
     word: word,
+    prompt: prompt,
     guess: Array(word.length).fill(""),
     guessIndex: 0,
     guesses: [],
