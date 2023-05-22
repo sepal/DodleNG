@@ -2,6 +2,7 @@ import { useGame } from "@/lib/gameContext";
 import { Key } from "./Key";
 import { KeyRow } from "./KeyRow";
 import { GAME_STATE_TYPE } from "@/types/game";
+import { KeyboardHandler } from "./KeyboardHandler";
 
 export const Keyboard = () => {
   const { state, handleAddLetter, handleRemoveLetter, handleGuess } = useGame();
@@ -42,6 +43,11 @@ export const Keyboard = () => {
 
   return (
     <div className="flex flex-col items-center">
+      <KeyboardHandler
+        handleAddLetter={handleAddLetter}
+        handleRemoveLetter={handleRemoveLetter}
+        handleGuess={handleGuess}
+      />
       <KeyRow>{firstRow}</KeyRow>
       <KeyRow>{secondRow}</KeyRow>
       <KeyRow>
