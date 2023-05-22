@@ -1,6 +1,6 @@
 export enum KEY_TYPE {
-  UNUSED,
-  WRONG,
-  CORRECT,
-  PRESENT,
+  UNUSED = "unused",
+  WRONG = "wrong",
+  CORRECT = "correct",
+  PRESENT = "present",
 }

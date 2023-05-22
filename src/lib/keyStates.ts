@@ -6,6 +6,9 @@ export function getKeyStates(word: string, guesses: string[]) {
   const solution = word.toLowerCase();
 
   guesses.forEach((guess) => {
+    if (guess.length != word.length) {
+      throw "Invalid guess size";
+    }
     const splitGuess = Array.from(guess.toLowerCase());
     splitGuess.forEach((letter, i) => {
       if (!solution.includes(letter)) {
