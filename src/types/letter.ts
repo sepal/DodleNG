@@ -1,4 +1,4 @@
-export enum KEY_TYPE {
+export enum LETTER_TYPE {
   UNUSED = "unused",
   WRONG = "wrong",
   CORRECT = "correct",

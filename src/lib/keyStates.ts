@@ -1,12 +1,12 @@
-import { KEY_TYPE } from "@/types/keyboard";
+import { LETTER_TYPE } from "@/types/letter";
 
-export function getKeyTypeColor(keyType: KEY_TYPE) {
+export function getKeyTypeColor(keyType: LETTER_TYPE) {
   switch (keyType) {
-    case KEY_TYPE.WRONG:
+    case LETTER_TYPE.WRONG:
       return "bg-slate-400 text-white";
-    case KEY_TYPE.CORRECT:
+    case LETTER_TYPE.CORRECT:
       return "bg-green-700 text-white";
-    case KEY_TYPE.PRESENT:
+    case LETTER_TYPE.PRESENT:
       return "bg-yellow-200";
     default:
       return "bg-white";
@@ -14,7 +14,7 @@ export function getKeyTypeColor(keyType: KEY_TYPE) {
 }
 
 export function getKeyStates(word: string, guesses: string[]) {
-  let states: { [key: string]: KEY_TYPE } = {};
+  let states: { [key: string]: LETTER_TYPE } = {};
 
   const solution = word.toLowerCase();
 
@@ -25,13 +25,13 @@ export function getKeyStates(word: string, guesses: string[]) {
     const splitGuess = Array.from(guess.toLowerCase());
     splitGuess.forEach((letter, i) => {
       if (!solution.includes(letter)) {
-        states[letter] = KEY_TYPE.WRONG;
+        states[letter] = LETTER_TYPE.WRONG;
         return;
       } else if (letter == solution[i]) {
-        states[letter] = KEY_TYPE.CORRECT;
+        states[letter] = LETTER_TYPE.CORRECT;
         return;
-      } else if (states[letter] != KEY_TYPE.CORRECT) {
-        states[letter] = KEY_TYPE.PRESENT;
+      } else if (states[letter] != LETTER_TYPE.CORRECT) {
+        states[letter] = LETTER_TYPE.PRESENT;
       }
     });
   });

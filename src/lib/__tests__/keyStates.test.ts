@@ -4,17 +4,17 @@
  *   set.
  */
 import { getKeyStates } from "../keyStates";
-import { KEY_TYPE } from "@/types/keyboard";
+import { LETTER_TYPE } from "@/types/letter";
 describe("getKeyStates", () => {
   it("should return correct key states", () => {
     const word = "apple";
     const guesses = ["aplex"];
     const expectedStates = {
-      a: KEY_TYPE.CORRECT,
-      p: KEY_TYPE.CORRECT,
-      l: KEY_TYPE.PRESENT,
-      e: KEY_TYPE.PRESENT,
-      x: KEY_TYPE.WRONG,
+      a: LETTER_TYPE.CORRECT,
+      p: LETTER_TYPE.CORRECT,
+      l: LETTER_TYPE.PRESENT,
+      e: LETTER_TYPE.PRESENT,
+      x: LETTER_TYPE.WRONG,
     };
     const result = getKeyStates(word, guesses);
     expect(result).toEqual(expectedStates);

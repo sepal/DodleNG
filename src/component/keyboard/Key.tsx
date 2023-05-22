@@ -1,17 +1,17 @@
 import { ReactNode } from "react";
-import { KEY_TYPE } from "@/types/keyboard";
+import { LETTER_TYPE } from "@/types/letter";
 import { getKeyTypeColor } from "@/lib/keyStates";
 
 interface Props {
   value: string;
-  type?: KEY_TYPE;
+  type?: LETTER_TYPE;
   children?: ReactNode;
   onClick?: (value: string) => void;
 }
 
 export const Key = ({
   value,
-  type = KEY_TYPE.UNUSED,
+  type = LETTER_TYPE.UNUSED,
   children,
   onClick = (value: string) => {},
 }: Props) => {
