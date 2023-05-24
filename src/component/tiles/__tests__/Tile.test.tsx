@@ -1,8 +1,9 @@
 /**
  * @author codelity_proto@0.0.1
- * @request /home/sebastian/Work/projects/dodle/dodle
+ * @request Create a test for the Tile component, which checks if it has the
+ *   right background color class depending on it's letter type.
  */
-import { render, screen } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react";
 import { Tile } from "../Tile";
 import { LETTER_TYPE } from "@/types/letter";
 
@@ -28,6 +29,7 @@ describe("Tile component", () => {
       render(<Tile letter={letter} type={type} />);
       const tile = screen.getByTestId("tile");
       expect(tile).toHaveClass(expectedClasses[index]);
+      cleanup();
     });
   });
 });

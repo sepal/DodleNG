@@ -8,7 +8,6 @@ interface Props {
 
 export const Tile = ({ letter, type = LETTER_TYPE.UNUSED }: Props) => {
   const color = getLetterTypeColor(type);
-  console.log(color);
   let styling = `border ${color} inline-flex items-center justify-center text-lg rounded h-[2rem] w-[2rem] cursor-pointer`;
 
   return (
