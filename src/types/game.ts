@@ -30,3 +30,11 @@ export interface GameStateAction {
   type: GAME_STATE_ACTION_TYPE;
   payload: GameStateActionPayload;
 }
+
+export interface Game {
+  id: string;
+  word: string;
+  prompt: string;
+  gameDate: number;
+  levels: number;
+}

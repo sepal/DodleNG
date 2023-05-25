@@ -6,12 +6,13 @@ import { TileGrid } from "../tiles";
 import { GameProvider } from "@/lib/gameContext";
 import { StateMessage } from "./StateMessage";
 import { Keyboard } from "../keyboard";
+import { Game } from "@/types/game";
 
 interface GameProps {
-  game: GamesRecord;
+  game: Game;
 }
 
-export const Game = ({ game }: GameProps) => {
+export const GameContainer = ({ game }: GameProps) => {
   const imageUrl = `/api/game/${game.id}/image/${1}`;
 
   if (!game.word || !game.prompt) {

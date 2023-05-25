@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { cookies } from "next/dist/client/components/headers";
 import { fetchGame } from "@/lib/game";
-import { Game } from "@/component/game";
+import { GameContainer } from "@/component/game";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,7 @@ export default async function Home() {
   return (
     <main>
       <h1 className="text-4xl">Dodle</h1>
-      <Game game={game} />
+      <GameContainer game={game} />
     </main>
   );
 }
