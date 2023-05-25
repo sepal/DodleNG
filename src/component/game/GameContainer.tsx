@@ -20,7 +20,7 @@ export const GameContainer = ({ game }: GameProps) => {
   }
 
   return (
-    <GameProvider word={game.word} prompt={game.prompt}>
+    <GameProvider game={game}>
       <div className="flex items-center min-h-screen flex-col">
         <Easel imageUrl={imageUrl} />
         <TileGrid word={game.word} />

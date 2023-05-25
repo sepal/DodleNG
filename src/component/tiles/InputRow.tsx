@@ -5,8 +5,8 @@ import { InputTile } from "./InputTile";
 
 export const InputRow = () => {
   const { state, setGuessIndex } = useGame();
-  const { word, guess, guessIndex } = state;
-  const wordLen = word.length;
+  const { game, guess, guessIndex } = state;
+  const wordLen = game.word.length;
 
   const inputTiles = Array(wordLen)
     .fill(null)

@@ -13,7 +13,13 @@ import {
 describe("gameReducer", () => {
   test("enter letters and make a guess with correct letters", () => {
     const initialState: GameState = {
-      word: "test",
+      game: {
+        id: "1",
+        word: "test",
+        prompt: "Test prompt",
+        gameDate: 1620000000,
+        levels: 5,
+      },
       guess: Array(4).fill(""),
       guessIndex: 0,
       guesses: [],
@@ -45,7 +51,13 @@ describe("gameReducer", () => {
 
   test("achieve failed game state correctly", () => {
     const initialState: GameState = {
-      word: "test",
+      game: {
+        id: "1",
+        word: "test",
+        prompt: "Test prompt",
+        gameDate: 1620000000,
+        levels: 5,
+      },
       guess: Array(4).fill(""),
       guessIndex: 0,
       guesses: [],

@@ -1,8 +1,9 @@
 import { ReactNode, createContext, useContext, useReducer } from "react";
-import gameReducer from "./gameReducer";
+import gameReducer from "./gameReducer.ts";
 import {
   GAME_STATE_ACTION_TYPE,
   GAME_STATE_TYPE,
+  Game,
   GameState,
 } from "@/types/game";
 
@@ -25,16 +26,14 @@ export const useGame = () => {
 };
 
 interface GameProviderProps {
-  word: string;
-  prompt: string;
+  game: Game;
   children?: ReactNode;
 }
 
-export const GameProvider = ({ children, word, prompt }: GameProviderProps) => {
+export const GameProvider = ({ children, game }: GameProviderProps) => {
   const [state, dispatch] = useReducer(gameReducer, {
-    word: word,
-    prompt: prompt,
-    guess: Array(word.length).fill(""),
+    game: game,
+    guess: Array(game.word.length).fill(""),
     guessIndex: 0,
     guesses: [],
     state: GAME_STATE_TYPE.PLAYING,

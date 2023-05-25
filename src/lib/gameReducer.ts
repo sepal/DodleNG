@@ -6,7 +6,7 @@ import {
 } from "@/types/game";
 
 export default function (state: GameState, action: GameStateAction) {
-  const { word } = state;
+  const { word } = state.game;
   const { type, payload } = action;
   const newGuess = [...state.guess];
 
@@ -41,7 +41,7 @@ export default function (state: GameState, action: GameStateAction) {
       if (
         action.payload.guessIndex === undefined ||
         action.payload.guessIndex < 0 ||
-        action.payload.guessIndex >= state.word.length
+        action.payload.guessIndex >= word.length
       ) {
         return state;
       }
@@ -60,7 +60,7 @@ export default function (state: GameState, action: GameStateAction) {
       if (guessString.toLowerCase() == word.toLowerCase()) {
         newGameState = GAME_STATE_TYPE.SUCCESS;
       } else if (
-        state.guesses.length >= 4 &&
+        state.guesses.length >= state.game.levels - 1 &&
         guessString.toLowerCase() != word.toLowerCase()
       ) {
         newGameState = GAME_STATE_TYPE.FAILED;

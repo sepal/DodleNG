@@ -21,7 +21,7 @@ export const StateMessage = () => {
       <div>
         The painting shows:
         <br />
-        {state.prompt}
+        {state.game.prompt}
       </div>
     </div>
   );

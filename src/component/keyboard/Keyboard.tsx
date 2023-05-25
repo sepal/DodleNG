@@ -24,7 +24,7 @@ export const Keyboard = () => {
     handleRemoveLetter();
   };
 
-  let keyStates = getKeyStates(state.word, state.guesses);
+  let keyStates = getKeyStates(state.game.word, state.guesses);
 
   const firstRow = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"].map(
     (v) => (
