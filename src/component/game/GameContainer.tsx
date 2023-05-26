@@ -7,14 +7,13 @@ import { GameProvider } from "@/lib/gameContext";
 import { StateMessage } from "./StateMessage";
 import { Keyboard } from "../keyboard";
 import { Game } from "@/types/game";
+import { EaselContainer } from "./EaselSlider";
 
 interface GameProps {
   game: Game;
 }
 
 export const GameContainer = ({ game }: GameProps) => {
-  const imageUrl = `/api/game/${game.id}/image/${1}`;
-
   if (!game.word || !game.prompt) {
     return <div className="text-xl">"No new game"</div>;
   }
@@ -22,7 +21,7 @@ export const GameContainer = ({ game }: GameProps) => {
   return (
     <GameProvider game={game}>
       <div className="flex items-center min-h-screen flex-col">
-        <Easel imageUrl={imageUrl} />
+        <EaselContainer />
         <TileGrid word={game.word} />
         <StateMessage />
         <Keyboard />
